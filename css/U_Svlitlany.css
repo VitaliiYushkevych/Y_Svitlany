@@ -38,7 +38,7 @@
   background-image: url(/img/beaf_bg1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 120vh;
+  height: 100vh;
 }
 /*------- Header------ */
 .buttomUp {
@@ -53,6 +53,7 @@
   font-weight: 700;
   box-shadow: inset 0 0 0 0 black;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  z-index: 1;
 }
 .buttomUp:hover {
   padding: auto;
@@ -106,20 +107,31 @@ header a:hover {
   color: white;
   transform: scale(1.1);
 }
+.firstPage {
+  transition-delay: 5s;
+  transition-property: display:none;
+}
 .firstPage h1 {
   color: red;
   background-color: rgba(255, 255, 255, 0.8);
   display: table;
-  padding: 1rem;
+  padding: 0,5rem;
   margin: 0%;
-  font-size: 5rem;
+  font-size: 4rem;
   text-shadow: 1px 1px 2px #000;
+  opacity: 0.2;
+  
 }
+.firstPage p {
+  opacity: 0.1;
+}
+
+
 .firstPage h2 {
   color: white;
   background-color: rgba(255, 255, 255, 0.5);
   display: table;
-  padding: 1rem;
+  padding: 0,5rem;
   margin: 0%;
   font-size: 3rem;
   text-shadow: 1px 1px 2px #000;
@@ -181,16 +193,27 @@ header a:hover {
 .textAbout {
   width: 50%;
 }
-.ownerPhoto {
-  height: 600px;
-  width: 600px;
-  border-radius: 20%;
+.ownerPhoto  {
+  height: 75vh;
+  width: 75vh;
+  border-radius: 5%;
   align-items: center;
   margin: 5rem;
   margin-right: 10rem;
+  
 }
+
+
 /*------- Informatin about us------ */
 /*------- Product description------ */
+.productsStart h2 {
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  border-bottom-style: groove;
+  border-bottom-color: black;
+  opacity: 0;
+}
 .product {
   background-color: rgb(48, 45, 45);
   display: flex;
@@ -202,6 +225,7 @@ header a:hover {
   margin: auto;
   text-align: center;
   font-family: arial;
+  border-radius: 5%;
 }
 
 .price {
@@ -276,12 +300,21 @@ header a:hover {
   background-color: rgb(48, 45, 45);
   color: white;
   text-align: center;
-  height: 110vh;
+  height: 100vh;
+
+  
 }
 .mapShema {
   display: block;
   width: 50%;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.googleMapShema {
+  justify-content: center;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
 }
 .line {
   display: flex;
@@ -292,5 +325,63 @@ header a:hover {
   background-color: rgb(48, 45, 45);
   margin: 0;
   color: white;
+  height: 80vh;
+  justify-content: center;
+}
+.bg {
+ 
+  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+ 
 }
 /*------- Location information------ */
+.www {
+  background-color: rgb(48, 45, 45);
+  display: flex;
+}
+.orderInfo1 {
+  position: sticky;
+  top: 0;
+  text-align: right;
+  color: white;
+  display: table;
+  padding: 1px;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: auto;
+  margin-right: 0px;
+  margin-left: auto;
+  height: 100%;
+  width: 40%;
+}
+
+.orderInfo1 p:hover {
+  padding: auto;
+  box-shadow: inset 300px 0 0 0 #b90113;
+  color: black;
+  transform: scale(1.02);
+}
+.orderInfo1 h4 {
+  font-size: 15px;
+}
+.orderInfo1 a {
+  text-decoration: none;
+  color: white;
+}
+.orderInfo1 a:hover {
+  padding: auto;
+  box-shadow: inset 300px 0 0 0 #b90113;
+  color: black;
+}
+
+.element-animation {
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateY(0%);
+}

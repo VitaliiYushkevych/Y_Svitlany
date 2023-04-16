@@ -1,0 +1,25 @@
+.firstPage.element-animation.element-show h1 {
+  color: red;
+  opacity: 0.8;
+  transition: all 3s;
+  transform: translateY(0%);
+}
+.firstPage.element-animation.element-show p {
+  color: red;
+  opacity: 0.8;
+  transition: all 1.5s;
+  transform: translateY(0%);
+  transition-delay: 1s;
+  opacity: 1;
+}
+.productsStart.element-animation.element-show h2 {
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  border-bottom-style: groove;
+  border-bottom-color: black;
+  opacity: 0.8;
+  transition: all 0.25s;
+  transform: translateY(0%);
+  opacity: 1;
+}
